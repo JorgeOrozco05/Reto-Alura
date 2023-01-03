@@ -1,0 +1,85 @@
+<html lang="es">
+<meta charset="UTF-8">
+<title>Encriptador</title>
+<style>
+    textarea{
+	display: block;
+	width: 400px;
+	height: 150px;
+	margin: 20px 5px;
+    }
+    main{
+	display: inline;
+	margin-left:20px;
+    }
+    .contenido2{
+	margin-top: 20px;
+    }
+    #desencriptar{
+	display: none;
+    }
+    #copiar{
+	display: none;
+    }
+	
+</style>
+<body>
+  <main>
+    <div class="contenido1">
+        <label>Mensaje a encriptar</label>
+	<textarea id="encriptar" cols=5 row=10 placeholder="Escriba aqui su mensaje"></textarea>
+	
+	<button id="funcionEncriptar">Encriptar</button>
+	<button id="funcionDesencriptar">Desencriptar</button>
+    </div>
+    <div class="contenido2">
+	<label>Mensaje encriptado</label>
+	<textarea id="desencriptar" cols=5 row=10></textarea>
+	<button id="copiar">Copiar</button>
+    </div>
+  </main>
+    <script>
+	function probar(){
+		alert("Hola "+mensaje.value)
+	}
+	function encriptar(){
+	    var cuadro = document.getElementById("desencriptar");
+	    var boton = document.getElementById("copiar");
+	    var msgEncriptado = mensaje.value.replaceAll("e","enter")
+	    .replaceAll("i","imes").replaceAll("a","ai").replaceAll("o","ober")
+	    .replaceAll("u","ufat");
+	    document.getElementById("desencriptar").innerHTML = msgEncriptado;
+	    mensaje.value = "";
+	    cuadro.setAttribute("style", "display: block;");
+	    boton.setAttribute("style", "display: block;");
+	}
+	function desencriptar(){
+	    var msgEncriptado = mensaje.value.replaceAll("enter","e")
+	    .replaceAll("imes","i").replaceAll("ai","a").replaceAll("ober","o")
+	    .replaceAll("ufat","u");
+	    document.getElementById("desencriptar").innerHTML = msgEncriptado;
+	    mensaje.value = "";
+	    var cuadro = document.getElementById("desencriptar");
+	    var boton = document.getElementById("copiar");
+	    cuadro.setAttribute("style", "display: block;");
+	    boton.setAttribute("style", "display: block;");
+	}
+	function copiar(){
+   	    var contenido = document.getElementById("desencriptar");
+	    contenido.select();
+   	    document.execCommand('copy');
+	    //contenido.value="";
+	    alert("Copiado al portapapeles");
+	}
+
+	var mensaje = document.getElementById("encriptar");
+	var mensaje2 = document.getElementById("desencriptar");
+	
+	var boton = document.getElementById("funcionEncriptar");
+	var boton1 = document.getElementById("funcionDesencriptar");
+	var boton2 = document.getElementById("copiar");
+	boton.onclick = encriptar;
+	boton1.onclick = desencriptar;
+	boton2.onclick = copiar;
+    </script>
+</body>

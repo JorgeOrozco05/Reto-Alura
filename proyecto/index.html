@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 1</title>
+    <link rel="stylesheet" href="resetcss.css">
+    <link rel="stylesheet" href="estiloNuevo.css">
+    <script src="funcionesJS.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img class="logoIma" src="imagenes/Vector.png" alt="Logo de Alura">
+            <h1 class="titulo">ENCRIPTADOR DE MENSAJES JOROZBA</h1>
+        </div>
+        <div class="left">
+            <textarea name="textoEntrada" id="textoEntrada" cols="30" rows="10" placeholder="Ingrese el texto aqui..."></textarea>
+        </div>
+        <div class="derecha">
+            <img id="imaDerecha" src="imagenes/ocultaTexto.png" alt="Niño buscando estrellas">
+            <h1 id="textoRef">Ningun mensaje fue encontrado</h1>
+            <textarea name="textoSalida" id="textoSalida" cols="30" rows="10">Ingrese el texto que deseas encriptar o desencriptar</textarea>
+            <button type="button" id="copiar" name="copiar" onclick="copiar()">Copiar</button>
+        </div>
+        <div class="left-button">
+            <p> <img src="imagenes/advertencia.png" alt="simbolo de advertencia"> Solo minusculas y sin acentos</p>
+            <button type="button" id="encriptar" onclick="encriptar()">Encriptar</button>
+            <button type="button" id="desencriptar" onclick="desencriptar()">Desencriptar</button>
+        </div>
+    </div>
+</body>
+</html>
