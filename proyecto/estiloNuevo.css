@@ -1,11 +1,15 @@
 body{
     font-size: 18px;
     background: rgba(183, 215, 219, 0.788);
-}
+    /* background-image: url('imagenes/fondo.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; */
+    }
 .container{
     margin: auto;
     width: 960px;
-    height: 650px;
+    height: 850px;
     padding: 5px;
 }
 .logo{
@@ -110,31 +114,71 @@ body{
     border-radius: 24px;
     display: none;
 }
+footer{
+    position: absolute;
+    top: 650px;
+    width: 100%;
+    height: 150px;
+    color: rgb(8, 240, 27);
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    background-image: url('imagenes/fondo.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
 
 /* Estilos para visualizacion en una tablet de hasta 768px */
 
 @media screen and (max-width:768px) {
+    body{
+        margin: 2px auto;
+    }
     .container, .left, .derecha, .left-button, #textoSalida{
         width: 100%;
+    }
+    .container{
+        height: 1151px;
     }
     .derecha{
         float: none;
         position: absolute;
-        top: 1001px;
-        left: 1px;
+        top: 701px;
+        left: 5px;
+        right: 5px;
+        width: 100%;
+        margin: 10px auto;
     }
     #imaDerecha{
         display: none;
     }
+    #textoRef{
+        text-align: center;
+    }
+    #textoSalida{
+        margin: 10px auto;
+        width: 98%;
+    }
+    #copiar{
+        margin: 20px auto;
+        position: absolute;
+        left: 220px;
+        bottom: 10%;
+    }
     .left-button{
         float: none;
         position: absolute;
-        top: 870px;
+        top: 570px;
         left: 40px;
     }
-    #copiar{
-        position: relative;
-        bottom: 10%;
-        
+    footer{
+        position: absolute;
+        top: 1001px;
     }
+    
 }
+
+/* Estilos para visualizacion en un smartphone hasta 6" */

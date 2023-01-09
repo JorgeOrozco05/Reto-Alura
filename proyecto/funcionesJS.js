@@ -6,7 +6,7 @@ function encriptar(){
     document.getElementById("imaDerecha").style.display="none";
     document.getElementById("textoRef").style.display="none";
     document.getElementById("textoSalida").innerHTML = msgEncriptado;
-    document.getElementById("textoEntrada").innerHTML = "Mensaje encriptado...";
+    document.getElementById("textoEntrada").value = "Mensaje encriptado...";
     document.getElementById("copiar").style.display="show";
     document.getElementById("copiar").style.display="inherit";
    
@@ -20,7 +20,7 @@ function desencriptar(){
     document.getElementById("imaDerecha").style.display="none";
     document.getElementById("textoRef").style.display="none";
     document.getElementById("textoSalida").innerHTML = msgEncriptado;
-    //mensaje.value = "";
+    document.getElementById("textoEntrada").value = "Mensaje desencriptado...";
     document.getElementById("copiar").style.display="show";
     document.getElementById("copiar").style.display="inherit";
 }
@@ -30,6 +30,8 @@ function copiar(){
     contenido.select();
     document.execCommand('copy');
     //contenido.value="";
+    document.getElementById("textoEntrada").value = "";
+    document.getElementById("textoEntrada").focus();
     alert("Copiado al portapapeles");
 }
 
