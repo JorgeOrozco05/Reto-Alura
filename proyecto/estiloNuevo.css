@@ -5,6 +5,10 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     }
 .container{
     margin: auto;
@@ -147,9 +151,9 @@ footer{
         float: none;
         position: absolute;
         top: 701px;
-        left: 5px;
+        left: 30px;
         right: 5px;
-        width: 100%;
+        width: 95%;
         margin: 10px auto;
     }
     #imaDerecha{
@@ -182,3 +186,52 @@ footer{
 }
 
 /* Estilos para visualizacion en un smartphone hasta 6" */
+
+@media screen and (max-width:480px){
+    .logo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logoIma{
+        float: none;
+        display: block;
+        margin: 5% auto;
+    }
+    .derecha{
+        float: none;
+        position: absolute;
+        top: 701px;
+        left: 10px;
+        right: 10px;
+        width: 100%;
+        margin: 10px auto;
+    }
+    #imaDerecha{
+        display: none;
+    }
+    .left-button{
+        width: 100%;
+        height: auto;
+        border-radius: 24px;
+        margin: 10px auto;
+        float: none;
+        position: absolute;
+        top: 470px;
+        left: 5px;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .left-button p{
+        text-align: left;
+        margin: 5px auto;
+    }
+    #encriptar, #desencriptar{
+        margin-left: 5%;
+    }
+}
