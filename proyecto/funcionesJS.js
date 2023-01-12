@@ -7,6 +7,8 @@ function encriptar(){
     document.getElementById("textoRef").style.display="none";
     document.getElementById("textoSalida").innerHTML = msgEncriptado;
     document.getElementById("textoEntrada").value = "Mensaje encriptado...";
+    document.getElementById("textoEntrada").style.background = "url('imagenes/matrix.jpg')";
+    document.getElementById("textoEntrada").style.color = "yellow";
     document.getElementById("copiar").style.display="show";
     document.getElementById("copiar").style.display="inherit";
    
@@ -21,15 +23,18 @@ function desencriptar(){
     document.getElementById("textoRef").style.display="none";
     document.getElementById("textoSalida").innerHTML = msgEncriptado;
     document.getElementById("textoEntrada").value = "Mensaje desencriptado...";
-    document.getElementById("copiar").style.display="show";
-    document.getElementById("copiar").style.display="inherit";
+    document.getElementById("textoEntrada").style.background = "url('imagenes/matrix.jpg')";
+    document.getElementById("textoEntrada").style.color = "yellow";
+    
 }
 
 function copiar(){
     var contenido = document.querySelector("#textoSalida");
     contenido.select();
     document.execCommand('copy');
-    //contenido.value="";
+    document.getElementById("textoEntrada").style.background = "rgba(183, 215, 219, 0.788)";
+    document.getElementById("textoEntrada").style.color = "#0A3871";
+    // document.getElementById("textoSalida").value = "";
     document.getElementById("textoEntrada").value = "";
     document.getElementById("textoEntrada").focus();
     alert("Copiado al portapapeles");
@@ -39,9 +44,3 @@ function copiar(){
 
 var mensaje2 = document.getElementById("textoSalida");
 
-// var boton = document.getElementById("encriptar");
-// var boton1 = document.getElementById("desencriptar");
-// var boton2 = document.getElementById("copiar");
-// boton.onclick = encriptar;
-// boton1.onclick = desencriptar;
-// boton2.onclick = copiar;

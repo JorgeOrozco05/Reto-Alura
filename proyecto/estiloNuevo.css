@@ -98,6 +98,7 @@ body{
     border-radius: 24px;
     margin-left: 15%;
     background: #0A3871;
+    
 }
 #desencriptar{
     padding: 24px;
@@ -134,6 +135,7 @@ footer{
     padding-bottom: 20px;
     padding-top: 20px;
 }
+
 
 /* Estilos para visualizacion en una tablet de hasta 768px */
 
@@ -206,14 +208,14 @@ footer{
         top: 701px;
         left: 10px;
         right: 10px;
-        width: 100%;
+        width: 90%;
         margin: 10px auto;
     }
     #imaDerecha{
         display: none;
     }
     .left-button{
-        width: 100%;
+        width: 90%;
         height: auto;
         border-radius: 24px;
         margin: 10px auto;
@@ -233,5 +235,11 @@ footer{
     }
     #encriptar, #desencriptar{
         margin-left: 5%;
+    }
+    #copiar{
+        margin: 20px auto;
+        position: absolute;
+        left: 100px;
+        bottom: 5%;
     }
 }
