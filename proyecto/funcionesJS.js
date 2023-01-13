@@ -1,5 +1,6 @@
 function encriptar(){
     var mensaje = document.getElementById("textoEntrada").value.toLowerCase();
+    mensaje = darFormato(mensaje);
     var msgEncriptado = mensaje.replaceAll("e","enter")
     .replaceAll("i","imes").replaceAll("a","ai").replaceAll("o","ober")
     .replaceAll("u","ufat");
@@ -11,6 +12,7 @@ function encriptar(){
     document.getElementById("textoEntrada").style.color = "yellow";
     document.getElementById("copiar").style.display="show";
     document.getElementById("copiar").style.display="inherit";
+    document.getElementById("textoSalida").disabled = false;
    
 }
 
@@ -25,7 +27,9 @@ function desencriptar(){
     document.getElementById("textoEntrada").value = "Mensaje desencriptado...";
     document.getElementById("textoEntrada").style.background = "url('imagenes/matrix.jpg')";
     document.getElementById("textoEntrada").style.color = "yellow";
-    
+    document.getElementById("copiar").style.display="show";
+    document.getElementById("copiar").style.display="inherit";
+    document.getElementById("textoSalida").disabled = false;
 }
 
 function copiar(){
@@ -40,7 +44,19 @@ function copiar(){
     alert("Copiado al portapapeles");
 }
 
-
-
 var mensaje2 = document.getElementById("textoSalida");
 
+
+// Autor Samuel Tique
+function darFormato(cadena){
+    
+    let aMinus = cadena.replace(/[áàäâ]/g,'a');
+    let eMinus = aMinus.replace(/[éèëê]/g,'e');
+    let iMinus = eMinus.replace(/[íìïî]/g,'i');
+    let oMinus = iMinus.replace(/[óòöô]/g,'o');
+    let uMinus = oMinus.replace(/[úùüû]/g,'u');
+    let enieMinus = uMinus.replace(/[ñ]/g,'n');
+    let resultado = enieMinus.replace(/['|°¬!^`~"#$%&/()Çç=?¿{}_,.´+<>¡¨*:;]/gi,'');
+
+    return resultado;
+}

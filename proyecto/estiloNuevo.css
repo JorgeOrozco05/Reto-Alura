@@ -189,7 +189,7 @@ footer{
 
 /* Estilos para visualizacion en un smartphone hasta 6" */
 
-@media screen and (max-width:480px){
+@media screen and (max-width:540px){
     .logo{
         width: 100%;
         display: flex;
@@ -206,13 +206,17 @@ footer{
         float: none;
         position: absolute;
         top: 701px;
-        left: 10px;
-        right: 10px;
+        left: 2px;
+        right: 1px;
         width: 90%;
-        margin: 10px auto;
+        margin: 1px 1%;
     }
     #imaDerecha{
         display: none;
+    }
+    #textoEntrada{
+        margin: 1% 0 1% 1%;
+        width: 90%;
     }
     .left-button{
         width: 90%;
@@ -235,6 +239,7 @@ footer{
     }
     #encriptar, #desencriptar{
         margin-left: 5%;
+        width: 80%;
     }
     #copiar{
         margin: 20px auto;
